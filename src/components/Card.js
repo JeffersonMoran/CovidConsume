@@ -5,6 +5,7 @@ const CardStyleWrapper = styled.div`
     border-radius: 20px;
     padding: 30px;
     margin: 30px;
+    box-shadow: 0px 3px 13px -10px rgba(0, 0, 0, 0.8);
 `;
 
 const Card = (props) => {

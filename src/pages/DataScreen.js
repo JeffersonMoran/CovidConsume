@@ -21,8 +21,8 @@ const DataScreen = () => {
 
     return (
         <div>
-            <CardList countries={countries_most_cases} titulo={"Paises com mais casos"}/>
-            <CardList countries={countries_less_cases} titulo={"Paises com menos casos"}/>
+            <CardList countries={countries_most_cases} titulo={"Paises com mais casos"} />
+            <CardList countries={countries_less_cases} titulo={"Paises com menos casos"} />
         </div>
     )
 }

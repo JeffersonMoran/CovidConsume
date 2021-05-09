@@ -1,25 +1,30 @@
 import Card from './Card';
 import styled from 'styled-components';
 
-const BoxTitulo = styled.h2`
+const BoxCard = styled.div`
+    width: 100%;
+`;
+
+
+const BoxTitulo = styled.div`
     padding-left: 20px;
 `;
 
 const CardList = (props) => {
     const { countries, titulo } = props;
     return (
-        <div className='container'>
+        <BoxCard>
             <BoxTitulo>
                 <h2>{titulo}</h2>
             </BoxTitulo>
-            <div className='row'>
+            <div style={{ display: 'flex' }}>
                 {countries.map(country => {
                     return (
-                        <Card country={country} className="col-md-4" />
+                        <Card country={country} />
                     )
                 })}
             </div>
-        </div>
+        </BoxCard>
     )
 }
 
