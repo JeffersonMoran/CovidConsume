@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { BACKGROUND_COLORS } from '../constants/colors';
+import CardData from './CardData';
 
 const CardStyleWrapper = styled.div`
     border: 1px solid black;
@@ -22,26 +23,9 @@ const Card = (props) => {
     const { country, background_color } = props;
     const [show_data, setShouldData] = useState(false);
 
-    const should_show_data = (country) => {
-        console.log(show_data);
+    const should_show_data = () => {
         if (!show_data) return false;
-        return (
-            <div>
-                <h4>Dados:</h4>
-                <div>
-                    <p>Casos: {country.cases} </p>
-                </div>
-                <div>
-                    <p>Mortes: {country.deaths} </p>
-                </div>
-                <div>
-                    <p>Casos por milhao de habitante: {country.casesPerOneMillion} </p>
-                </div>
-                <div>
-                    <p>Recuperados: {country.recovered} </p>
-                </div>
-            </div>
-        )
+        return (<CardData country={country}/>)
     }
 
     return (
