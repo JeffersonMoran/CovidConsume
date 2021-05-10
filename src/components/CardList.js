@@ -11,7 +11,7 @@ const BoxTitulo = styled.div`
 `;
 
 const CardList = (props) => {
-    const { countries, titulo } = props;
+    const { countries, titulo, background_color } = props;
     return (
         <BoxCard>
             <BoxTitulo>
@@ -20,7 +20,7 @@ const CardList = (props) => {
             <div style={{ display: 'flex' }}>
                 {countries.map(country => {
                     return (
-                        <Card country={country} />
+                        <Card country={country} background_color={background_color} />
                     )
                 })}
             </div>
